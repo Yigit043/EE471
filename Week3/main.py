@@ -1,8 +1,11 @@
+"""Demo script that simulates checking out items in the library system."""
+
 from custom_classes import MediaItem, Book, DVD, LibraryCollection
 
 
 def main():
-    # Part 2: Genel MediaItem örnekleri
+    """Run the demos for parts 2, 3 and 4."""
+    # Part 2: generic MediaItem objects
     book = MediaItem("1984", "George Orwell")
     movie = MediaItem("Inception", "Christopher Nolan")
 
@@ -12,7 +15,7 @@ def main():
     print(book.checkout())
     print(book)
 
-    # Part 3: Alt sınıflar
+    # Part 3: subclasses
     print("\n--- Part 3: Book subclass ---")
     novel = Book("Dune", "Frank Herbert", 412)
     print(novel)
@@ -25,6 +28,7 @@ def main():
     print(dvd.checkout())
     print(dvd)
 
+    # The second attempt shows that the reminder is only printed on success.
     print("\n--- Trying to check out the same DVD again ---")
     print(dvd.checkout())
 
